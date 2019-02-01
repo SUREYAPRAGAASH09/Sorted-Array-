@@ -1,5 +1,9 @@
 #. Find the length of the given integer array. Don't use the len() function.
-
+#algorithm :
+        #1. I have added a string to the list and iterated the 
+        # list item untill the string is found using while Loop 
+        #I have used while loop because where we can't predict when the list get ends
+        
 def len(array):
     count = 0
     i = 0
