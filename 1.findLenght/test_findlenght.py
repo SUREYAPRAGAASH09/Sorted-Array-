@@ -1,5 +1,6 @@
 import findlenght
-def test_assertTrue():
+
+def test_assertTrue(): #Environment test
     assert True
 
 
@@ -8,6 +9,6 @@ def test_listreturn6():
     array = [1,2,3,4,5,6]
     excepted = 6
     #act
-    actual = findlenght.len(array)
+    actual = findlenght.lenght(array)
     #assert
     assert excepted == actual
