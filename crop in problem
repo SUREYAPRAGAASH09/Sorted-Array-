@@ -1,0 +1,56 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+'''
+li = []
+n = 12345
+while(n!=0):
+    rev = n % 10
+    li.append(rev)
+    n = n / 10
+    n = int(n)
+print(li)
+'''
+Number = 12345
+Reverse = 0    
+while(Number > 0):    
+    Reminder = Number %10    
+    Reverse = (Reverse *10) + Reminder    
+    Number = Number //10
+print(Reverse)
+
+li = []
+#n = 12345
+while(Reverse!=0):
+    rev = Reverse% 10
+    li.append(rev)
+    Reverse = Reverse / 10
+    Reverse = int(Reverse)
+print(li)
+
+n = 0
+temp = li[1]
+while(n != 5):
+    if(n ==2 ):
+        li[n-1] = li[2]
+    if (n ==4):
+        li[n-2] = li[4]
+    
+    n = n + 1 
+li[-1] = temp 
+print(li)
+
+s = [str(i) for i in li] 
+print(s)
+vi = "".join(s)
+print(vi)
+print(type(vi))
+vi = int(vi)
+print(vi)
+print(type(vi))
+tottal = (vi)**5
+print(tottal)
