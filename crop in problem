@@ -5,33 +5,12 @@
 Write your code in this editor and press "Run" button to execute it.
 
 '''
-'''
-li = []
-n = 12345
-while(n!=0):
-    rev = n % 10
-    li.append(rev)
-    n = n / 10
-    n = int(n)
-print(li)
-'''
-Number = 12345
-Reverse = 0    
-while(Number > 0):    
-    Reminder = Number %10    
-    Reverse = (Reverse *10) + Reminder    
-    Number = Number //10
-print(Reverse)
 
-li = []
-#n = 12345
-while(Reverse!=0):
-    rev = Reverse% 10
-    li.append(rev)
-    Reverse = Reverse / 10
-    Reverse = int(Reverse)
-print(li)
 
+n1 = 12345
+li = [int(d) for d in str(n1)]
+
+print (li)
 n = 0
 temp = li[1]
 while(n != 5):
@@ -48,9 +27,16 @@ s = [str(i) for i in li]
 print(s)
 vi = "".join(s)
 print(vi)
-print(type(vi))
 vi = int(vi)
-print(vi)
-print(type(vi))
 tottal = (vi)**5
 print(tottal)
+temp = []
+total_list = [int(d) for d in str(tottal)]
+print(total_list)
+for i in range(16,21):
+    number = total_list[i]
+    number  = str(number)
+    temp.append(number)
+print (temp)
+final = "".join(temp)
+print(final)
