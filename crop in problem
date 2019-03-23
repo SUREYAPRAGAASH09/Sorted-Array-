@@ -1,42 +1,52 @@
-'''
 
-                            Online Python Compiler.
-                Code, Compile, Run and Debug python program online.
-Write your code in this editor and press "Run" button to execute it.
+print("Enter Five Digit number ")
+number = int(input("Enter the number"))
+def prepareList(num):
+    splited_numbers_List = [int(eachNum) for eachNum in str(num)]
+    return splited_numbers_List
 
-'''
+print (prepareList(number))
+List = prepareList(number)
 
-
-n1 = 12345
-li = [int(d) for d in str(n1)]
-
-print (li)
-n = 0
-temp = li[1]
-while(n != 5):
-    if(n ==2 ):
-        li[n-1] = li[2]
-    if (n ==4):
-        li[n-2] = li[4]
+def joinNumbers(List):
+    s = [str(i) for i in List] 
+    joinedNumbers = "".join(s)
+    return joinedNumbers
     
-    n = n + 1 
-li[-1] = temp 
-print(li)
+def shuffleList(List):
+    n = 0
+    temp = List[1]
+    while(n != 5):
+        if(n ==2 ):
+            List[n-1] = List[2]
+        if (n ==4):
+            List[n-2] = List[4]
+        n = n + 1 
+    List[-1] = temp
+    return List
+    
+shuffled =  (shuffleList(List))
 
-s = [str(i) for i in li] 
-print(s)
-vi = "".join(s)
-print(vi)
-vi = int(vi)
-tottal = (vi)**5
-print(tottal)
+shuffledNumber = (joinNumbers(shuffled))
+shuffledNumber = int(shuffledNumber)
+subfinalresult = (shuffledNumber)**5
+print(subfinalresult)
 temp = []
-total_list = [int(d) for d in str(tottal)]
-print(total_list)
-for i in range(16,21):
-    number = total_list[i]
+
+subfinalresult_list = prepareList(subfinalresult)
+print(subfinalresult_list)
+
+for i in range(1,6):
+    number = subfinalresult_list[-i]
     number  = str(number)
     temp.append(number)
 print (temp)
 final = "".join(temp)
-print(final)
+final = int(final)
+Reverse = 0    
+while(final > 0):    
+    Reminder = final %10    
+    Reverse = (Reverse *10) + Reminder    
+    final = final //10    
+print("The Result is ",end="")
+print(Reverse)
